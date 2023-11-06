@@ -15,8 +15,8 @@ const App: React.FC = () => {
   });
 
   const [filter, setFilter] = useState<string>('');
-  const [sortBy, setSortBy] = useState<string>('createdAt'); // 'createdAt', 'text', 'completed'
-  const [filterByStatus, setFilterByStatus] = useState<string>('all'); // 'all', 'completed', 'pending'
+  const [sortBy, setSortBy] = useState<string>('createdAt'); 
+  const [filterByStatus, setFilterByStatus] = useState<string>('all'); 
 
   const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -40,7 +40,7 @@ const App: React.FC = () => {
         setTasks((prevTasks) => [
           ...prevTasks,
           {
-            id: Date.now(), // Utilize o timestamp como id para evitar conflitos
+            id: Date.now(), 
             text: newTaskText,
             completed: false,
             editing: false,
